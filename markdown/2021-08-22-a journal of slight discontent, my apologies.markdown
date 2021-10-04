@@ -1,0 +1,16 @@
+Lately I’ve been wondering about ‘night life’. Interrogating the language feels important. Night life? I live at night every day. I get deep in the vibes without your things. I don’t think there are enough depictions of happy ‘antisocial’ people. I don’t want to ‘go out’ tonight.
+There’s this idea that we need things to be happy. We need to go out, we need drugs (alcohol especially), we need belongings. We need a nice apartment. These are powerful forces.
+
+If we can experience a spectrum of emotions with no one and nothing - we are crazy. No third party is profiting in that scenario. People take substances and do certain activities to escape reality, but if someone does so without any help - well, that’s crazy. Just because I can escape reality does not mean I can’t maintain a stable reality when I need to. It seems like good actors can manipulate their emotions at will? When I program web applications I want to greet every page refresh with high spirits and gratitude. People sometimes get worried by characters they don’t know.
+
+I’ve kind of been feeling like fuck truth, fuck reality. I think I’m feeling those vibes right now though. 
+
+Social pressure is powerful. What is ‘normal’ is powerful. I’ve spent a lot of time feeling frustrated by the status quo. I think a popular refrain, or at least a thought I have is: try to focus on yourself. Well, I try that too, and that has its own problems. 
+
+The cognitive tools I had in the past weren’t as powerful as the ones I have now. I wasn’t as into writing and it was difficult to have a long train of thought where I could get to the heart of matters, push past points that seemed impossible to get past, cut through the shroud, emerge from the fog, etc. I didn’t realize how much there is to inner life. How much is left unexpressed if you don’t care to try or look. I also think I’ve been a ‘slave to logic’ in some ways. It is difficult to reconcile a lot of ideas, to deal with seeming or actual contradictions, to deal with incomplete information. Each idea may branch into several more ideas, and those must be reconciled as well. So I guess I’m saying, managing a lot of information is hard (computer scientists: how hard is it?), and the social world is very complicated. And I’m getting sick of reasoning about the social world. I’ve tried to deal with emotional problems analytically (mostly by reasoning about the social world), and I think it’s done more harm than good (one of my favorite phrases lately). I’ve been wanting to write poetry. Instead of trying to describe the world I perceive and commenting on it, maybe I can write a story about a world I want.
+
+Writing after not having written for a while I’ve been worried I would just write drivel, but now it’s seeming like I just need to push through and perhaps embrace the drivel. I like the stream of consciousness style - I like to see how people’s minds work, unedited. I feel connected. I might just be lazy, not wanting to edit. 
+
+I’m trying to get away from putting myself in people’s heads - simulating minds. 
+
+Sometimes it is the case that the world I see is a reflection of my own world. 
