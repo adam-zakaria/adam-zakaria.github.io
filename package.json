@@ -1,5 +1,5 @@
 {
-  "name": "datatables",
+  "name": "adam_personal_site",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,6 +13,18 @@
     "showdown": "^1.9.1"
   },
   "devDependencies": {
-    "pug": "^3.0.2"
-  }
+    "nodemon": "^2.0.13",
+    "npm-watch": "^0.11.0",
+    "pug": "^3.0.2",
+    "sass": "^1.42.1"
+  },
+    "watch": {
+      "test2": "",
+      "test3": ""
+    },
+    "scripts": {
+      "watch": "npm-watch",
+      "test2": "echo 2",
+      "test3": "echo 3"
+    }
 }

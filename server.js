@@ -23,8 +23,8 @@ fs.readdir('/Users/azakaria/Code/personal_projects/personal_site/markdown', (err
             let blogLink = `<a href="/post">${file}</a>`; //href = endpoint that triggers the reading of the markdown file? the sending of.
 
             // Compile the source code
-            const compiledFunction = pug.compileFile('template.pug');
-            const compiledFunctionHome = pug.compileFile('homepage.pug');
+            const compiledFunction = pug.compileFile('pug/template.pug');
+            const compiledFunctionHome = pug.compileFile('pug/homepage.pug');
             let template = compiledFunction({ blog_post_text: data });
             let templateHome = compiledFunctionHome({ links: blogLink });
 
@@ -35,6 +35,8 @@ fs.readdir('/Users/azakaria/Code/personal_projects/personal_site/markdown', (err
                 }
             //file written successfully
             })
+
+//@media (max-width: 830px){
 
             fs.writeFile(`/Users/azakaria/Code/personal_projects/personal_site/templates/homepage.html`, templateHome, err => {
                 if (err) {
@@ -56,8 +58,7 @@ fs.readdir('/Users/azakaria/Code/personal_projects/personal_site/markdown', (err
 });
 
 app.get('/', (req, res) => {
-  //res.send('Hello World!')
-  res.sendFile('/Users/azakaria/Code/node_starter_app/index.html');
+  res.sendFile('/Users/azakaria/Code/personal_projects/personal_site/templates/homepage.html');
 })
 
 app.get('/post', (req, res) => {
