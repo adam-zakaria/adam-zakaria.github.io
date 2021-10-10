@@ -1,5 +1,9 @@
-This is my personal site! I create posts in markdown, which get read into pug templates, which get rendered and served! I use sass as well. Let me know if you're interested in a similar setup. I tried Jekyll out but it's not a good fit for me right now. I guess I wrote a simple static site generator?
+# Introduction
+This is my personal site! I wrote a simple static site generator with an automated build process. I tried Jekyll out, but I just couldn't get jazzed about it. 
 
+I create posts in markdown, which get read into pug templates, which get rendered and served! I use sass as well. Let me know if you have any questions or need help getting set up.
+
+# Setup
 Install the necessary files:
 ```
 npm i
