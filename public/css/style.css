@@ -1,3 +1,11 @@
+.inline-block {
+  display: inline-block; }
+
+.date {
+  font-style: oblique;
+  margin: 10px 0px;
+  font-size: 16px; }
+
 .middle {
   max-width: 760px;
   margin-left: auto;
@@ -5,6 +13,19 @@
 
 .center-text {
   text-align: center; }
+
+.right-text {
+  text-align: right;
+  margin-top: -30px;
+  font-size: 20px;
+  font-weight: normal; }
+
+.center-right {
+  text-align: center; }
+
+.flex {
+  display: flex;
+  justify-content: center; }
 
 h1 {
   text-align: center; }
