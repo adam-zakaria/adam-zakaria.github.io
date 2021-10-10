@@ -1,5 +1,5 @@
-To run:
-#window1
-npm run watch-sass
-#window2
-nodemon -e pug,js,md server.js
+To run this site and have files automatically build and reload, run these commands in separate terminals:
+```
+npm run watch-sass 
+nodemon -e pug,js,md server.js 
+```
