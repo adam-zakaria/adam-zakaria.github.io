@@ -21,7 +21,7 @@ fs.readdir('/Users/azakaria/Code/personal_projects/personal_site/markdown', (err
     files.forEach(file => {
         let fileBaseName =file.split('.')[0];
         let fileBaseNameNoUnderscores = fileBaseName.replace(/_/g, ' ');
-        postLinks += `<a href="/${fileBaseName}">${fileBaseNameNoUnderscores}</a><br>`; 
+        postLinks += `<a href="/public/pages/${fileBaseName}">${fileBaseNameNoUnderscores}</a><br>`; 
         fs.readFile(path.join('/Users/azakaria/Code/personal_projects/personal_site/markdown', file), 'utf8' , (err, data) => {
             if (err) {
                 console.error(err)
@@ -55,7 +55,7 @@ app.get('/', (req, res) => {
   res.sendFile('/Users/azakaria/Code/personal_projects/personal_site/pages/homepage.html');
 })
 
-app.get('/:post', (req, res) => {
+app.get('/public/pages/:post', (req, res) => {
     console.log(`post: ${path.join(markdownDir, req.params.post)}`)
     console.log(`file: ${path.join(markdownDir, req.params.post, '.html')}`);
     res.sendFile(path.join(pageDir, req.params.post) + '.html');
