@@ -21,9 +21,9 @@
         -->
     </div>
 </body>
-<link rel="stylesheet" href="public/packages/jquery-ui-1.12.1.custom/jquery-ui.min.css">
-<script src="public/packages/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
-<script src="public/packages/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-<link rel="stylesheet" href="public/css/style.css">
-<script src="public/js/gen.js"></script>
+<link rel="stylesheet" href="/public/packages/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<script src="/public/packages/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+<script src="/public/packages/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="/public/css/style.css">
+<script src="/public/js/gen.js"></script>
 </html>
