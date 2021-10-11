@@ -17,12 +17,12 @@ var postLinks = "";
 const PROJECT_DIR = "/Users/azakaria/Code/personal_projects/personal_site"
 var postData = [];
 let markdownDir = `${PROJECT_DIR}/markdown`;
-let pageDir = `${PROJECT_DIR}/pages`;
+let pageDir = `${PROJECT_DIR}/public/pages`;
 fs.readdir(`${PROJECT_DIR}/markdown`, (err, files) => {
     files.forEach(file => {
         let fileBaseName =file.split('.')[0];
         let fileBaseNameNoUnderscores = fileBaseName.replace(/_/g, ' ');
-        postLinks += `<a href="/public/pages/${fileBaseName}">${fileBaseNameNoUnderscores}</a><br>`; 
+        postLinks += `<a href="/public/pages/${fileBaseName}.html">${fileBaseNameNoUnderscores}</a><br>`; 
         fs.readFile(path.join(`${PROJECT_DIR}/markdown`, file), 'utf8' , (err, data) => {
             if (err) {
                 console.error(err)
@@ -53,13 +53,14 @@ fs.readdir(`${PROJECT_DIR}/markdown`, (err, files) => {
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(`${PROJECT_DIR}/pages/homepage.html`);
+  res.sendFile(`${PROJECT_DIR}/public/pages/homepage.html`);
 })
 
 app.get('/public/pages/:post', (req, res) => {
     console.log(`post: ${path.join(markdownDir, req.params.post)}`)
     console.log(`file: ${path.join(markdownDir, req.params.post, '.html')}`);
-    res.sendFile(path.join(pageDir, req.params.post) + '.html');
+    //res.sendFile(path.join(pageDir, req.params.post) + '.html');
+    res.sendFile(path.join(pageDir, req.params.post));
 })
 
 app.use("/public", express.static(__dirname + "/public"));
