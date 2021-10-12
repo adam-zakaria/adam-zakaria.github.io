@@ -56,6 +56,14 @@ app.get('/', (req, res) => {
   res.sendFile(`${PROJECT_DIR}/public/pages/homepage.html`);
 })
 
+
+app.get('/tower5', (req, res) => {
+  //res.sendFile(`/Users/azakaria/Code/personal_projects/Tower5/build/index.html`);
+  res.sendFile(`${PROJECT_DIR}/game.html`);
+})
+
+file://
+
 app.get('/public/pages/:post', (req, res) => {
     console.log(`post: ${path.join(markdownDir, req.params.post)}`)
     console.log(`file: ${path.join(markdownDir, req.params.post, '.html')}`);
@@ -64,6 +72,8 @@ app.get('/public/pages/:post', (req, res) => {
 })
 
 app.use("/public", express.static(__dirname + "/public"));
+app.use(express.static('./'));
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
