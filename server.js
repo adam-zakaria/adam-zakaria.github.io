@@ -14,25 +14,25 @@ var showdown  = require('showdown'),
 
 let html;
 var postLinks = "";
-const PROJECT_DIR = "/Users/azakaria/Code/personal_projects/personal_site"
+const projectDir = "/Users/azakaria/Code/personal_projects/personal_site"
+let markdownDir = `${projectDir}/markdown`;
+let templateDir = `${projectDir}/templates`;
+let pageDir = `${projectDir}/public/pages`;
 var postData = [];
-let markdownDir = `${PROJECT_DIR}/markdown`;
-let pageDir = `${PROJECT_DIR}/public/pages`;
-fs.readdir(`${PROJECT_DIR}/markdown`, (err, files) => {
+fs.readdir(`${projectDir}/markdown`, (err, files) => {
     files.forEach(file => {
         let fileBaseName =file.split('.')[0];
         let fileBaseNameNoUnderscores = fileBaseName.replace(/_/g, ' ');
         postLinks += `<a href="/public/pages/${fileBaseName}.html">${fileBaseNameNoUnderscores}</a><br>`; 
-        fs.readFile(path.join(`${PROJECT_DIR}/markdown`, file), 'utf8' , (err, data) => {
+        fs.readFile(path.join(`${projectDir}/markdown`, file), 'utf8' , (err, data) => {
             if (err) {
                 console.error(err)
                 return
             }
             html = converter.makeHtml(data);
-            const compiledFunction = pug.compileFile(`${PROJECT_DIR}/templates/template.pug`);
-            console.log(`postData: ${html}`);
+            const compiledFunction = pug.compileFile(`${projectDir}/templates/template.pug`);
             let template = compiledFunction({ blog_post_text: html, blog_post_title: fileBaseNameNoUnderscores});
-            fs.writeFile(`${PROJECT_DIR}/pages/${fileBaseName}.html`, template, err => {
+            fs.writeFile(`${pageDir}/${fileBaseName}.html`, template, err => {
                 if (err) {
                     console.error(err)
                     return
@@ -41,9 +41,9 @@ fs.readdir(`${PROJECT_DIR}/markdown`, (err, files) => {
             })
         })
     });
-    const compiledFunctionHome = pug.compileFile(`${PROJECT_DIR}/templates/homepage.pug`);
+    const compiledFunctionHome = pug.compileFile(`${templateDir}/homepage.pug`);
     let templateHome = compiledFunctionHome({ links: postLinks});
-    fs.writeFile(`${PROJECT_DIR}/pages/homepage.html`, templateHome, err => {
+    fs.writeFile(`${pageDir}/homepage.html`, templateHome, err => {
         if (err) {
             console.error(err)
             return
@@ -53,13 +53,13 @@ fs.readdir(`${PROJECT_DIR}/markdown`, (err, files) => {
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(`${PROJECT_DIR}/public/pages/homepage.html`);
+  res.sendFile(`${pageDir}/homepage.html`);
 })
 
 
 app.get('/tower5', (req, res) => {
   //res.sendFile(`/Users/azakaria/Code/personal_projects/Tower5/build/index.html`);
-  res.sendFile(`${PROJECT_DIR}/game.html`);
+  res.sendFile(`${projectDir}/game.html`);
 })
 
 file://

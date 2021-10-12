@@ -15,7 +15,7 @@ npm run watch-sass
 nodemon -e pug,js,md server.js 
 ```
 
-I can't get the game to run on the server because of routing problems. Navigate to localhost:3000/tower5, console, to see what's up.
+For some reason homepage.html is not getting generated, and the console of nodemon is complaining about missing files.
 
 # To-do:
 *Re-do the static directory so that I don't need to prefix everything with public.
