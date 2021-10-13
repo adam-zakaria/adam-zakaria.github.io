@@ -6,12 +6,21 @@ const fs = require('fs');
 var path = require('path');
 const pug = require('pug');
 var favicon = require('serve-favicon');
+var showdown  = require('showdown');
 
+/*
+middleware
+*/
 app.use(favicon(__dirname + '/public/images/favicon.ico')); 
+app.use("/public", express.static(__dirname + "/public"));
+app.use(express.static('./'));
 
-var showdown  = require('showdown'),
-    converter = new showdown.Converter();
 
+/*
+Convert markdown files to HTML, pass them to pug templates, and render those
+*/
+
+var converter = new showdown.Converter();
 let html;
 var postLinks = "";
 const projectDir = "/Users/azakaria/Code/personal_projects/personal_site"
@@ -52,28 +61,29 @@ fs.readdir(`${projectDir}/markdown`, (err, files) => {
     });
 });
 
+fs.copyFile('public/pages/homepage.html', 'index.html', (err) => {
+  if (err) throw err;
+});
+
+
+/*
+Routes!
+*/
+
+
 app.get('/', (req, res) => {
   res.sendFile(`${pageDir}/homepage.html`);
 })
 
-
 app.get('/tower5', (req, res) => {
-  //res.sendFile(`/Users/azakaria/Code/personal_projects/Tower5/build/index.html`);
   res.sendFile(`${projectDir}/game.html`);
 })
-
-file://
 
 app.get('/public/pages/:post', (req, res) => {
     console.log(`post: ${path.join(markdownDir, req.params.post)}`)
     console.log(`file: ${path.join(markdownDir, req.params.post, '.html')}`);
-    //res.sendFile(path.join(pageDir, req.params.post) + '.html');
     res.sendFile(path.join(pageDir, req.params.post));
 })
-
-app.use("/public", express.static(__dirname + "/public"));
-app.use(express.static('./'));
-
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
