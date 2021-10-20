@@ -22,12 +22,18 @@ html {
     justify-content: center; }
     .home-page .splash-banner .text-container {
       display: inline-block; }
-    .home-page .splash-banner .text {
-      text-align: center; }
-    .home-page .splash-banner .name {
-      text-align: right;
-      font-size: 20px;
-      font-weight: normal; }
+      .home-page .splash-banner .text-container .text {
+        text-align: center; }
+      .home-page .splash-banner .text-container .name {
+        margin-top: 30px;
+        text-align: right;
+        font-size: 20px;
+        font-weight: normal; }
+      .home-page .splash-banner .text-container .email {
+        text-align: right;
+        margin-top: -2px;
+        margin-bottom: 10px;
+        font-size: 12px; }
 
 .divider {
   border: 1px solid black;
@@ -41,6 +47,7 @@ html {
 h1 {
   text-align: center; }
 
+/* Thank you Faria Begum Riya! https://codepen.io/faria09/pen/vYGZVgW */
 .wrapper {
   margin-top: 10px;
   text-align: center; }

@@ -21,3 +21,9 @@ For some reason homepage.html is not getting generated, and the console of nodem
 *Re-do the static directory so that I don't need to prefix everything with public.
 
 *Extract the template building script from the server so I can watch HTML files without an infinite loop.
+
+*Add link css
+
+*Automate build process
+
+*Make links a list

@@ -25,14 +25,21 @@ html {
         justify-content: center;
         .text-container{
             display: inline-block;
-        }
-        .text{
-            text-align: center;
-        }
-        .name {
-            text-align: right;
-            font-size: 20px;
-            font-weight: normal;
+            .text{
+                text-align: center;
+            }
+            .name {
+                margin-top: 30px;
+                text-align: right;
+                font-size: 20px;
+                font-weight: normal;
+            }
+            .email{
+                text-align: right;
+                margin-top: -2px;
+                margin-bottom: 10px;
+                font-size: 12px;
+            }
         }
     }
 }
@@ -55,6 +62,7 @@ h1 {
 }
 
 
+/* Thank you Faria Begum Riya! https://codepen.io/faria09/pen/vYGZVgW */
 @import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
 .wrapper {
   //width: 100vw;
