@@ -1,3 +1,8 @@
+html {
+  width: 100%;
+  height: 100vh;
+}
+
 .center-right{
     text-align: center;
 }
@@ -26,7 +31,6 @@
         }
         .name {
             text-align: right;
-            margin-top: -30px;
             font-size: 20px;
             font-weight: normal;
         }
@@ -51,3 +55,49 @@ h1 {
 }
 
 
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+.wrapper {
+  //width: 100vw;
+  margin-top: 10px;
+  text-align: center;
+  span {
+    -webkit-text-stroke-width: 1.25px;
+    -webkit-text-stroke-color: #000;
+    font-size: 2em;
+    //text-shadow: 0 0px #f3c623, 0 0px #f2aaaa;
+    transform: translate(0, 10%) rotate(4deg);
+    animation: jump 2s ease-in-out infinite;
+    display: inline-block;
+    font-family: "Titan One", cursive;
+    color: #000;
+
+    @for $i from 1 through 17 {
+      &:nth-child(#{$i}) {
+        animation-delay: 120ms * $i;
+      }
+    }
+  }
+}
+
+@keyframes jump {
+  33% {
+    text-shadow: 0 10px #cad2de, 0 25px #b0b7c2; }
+  50% {
+    transform: translate(0, 0) rotate(-4deg);
+    text-shadow: 0 0px #81868f, 0 0px #56595e; }
+  66.67% {
+    text-shadow: 0 -10px #81868f, 0 -25px #2a2b2e; } }
+    
+
+@media screen and (max-height: 200px) {
+  .wrapper {
+    transform: scale(0.3,0.3);
+  }
+}
+@media screen and (max-width: 576px) {
+  .wrapper {
+    span {
+      font-size: 20px;
+    }
+  }
+}
