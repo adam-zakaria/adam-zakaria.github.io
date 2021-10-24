@@ -10,7 +10,7 @@ And pain
 And the suffering mind  
 And exercise, that's been helping a lot  
 I listened to a meditation on death the day  
-I got the news someone close to me is doing very poorly  
+I got news about someone close to me
 And my problems got put into perspective  
 Until people suck me back in - I blame you and me  
 But then I find strength, and if I'm lucky I remember  
