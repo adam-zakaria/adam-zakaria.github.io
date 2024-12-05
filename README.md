@@ -1,3 +1,6 @@
+# Server Side rendering
+For SEO
+
 # Install packages
 `npm i`
 
