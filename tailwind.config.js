@@ -3,21 +3,30 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        energetic: {
-          neonGreen: '#39FF14',
-          hotPink: '#FF69B4',
-          electricBlue: '#7DF9FF',
-          brightYellow: '#FFFF00',
-        },
+        primary: '#2C3E50',
+        secondary: '#3498DB',
+        accent: '#E74C3C',
+        background: '#ECF0F1',
+        text: '#2C3E50',
       },
-      animation: {
-        'energetic-fast': 'fast-spin 1s linear infinite',
+      borderColor: {
+        DEFAULT: '#BDC3C7',
       },
-      keyframes: {
-        'fast-spin': {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' },
-        },
+      borderWidth: {
+        DEFAULT: '1px',
+      },
+      borderRadius: {
+        DEFAULT: '4px',
+      },
+      transitionDuration: {
+        fast: '150ms',
+        medium: '300ms',
+        slow: '500ms',
+      },
+      padding: {
+        sm: '4px',
+        md: '8px',
+        lg: '16px',
       },
     },
   },

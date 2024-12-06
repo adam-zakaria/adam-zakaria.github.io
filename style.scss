@@ -1,0 +1,110 @@
+/* Professional and trustworthy styles */
+
+// Color Palette
+$primary: #2C3E50; // Dark Blue
+$secondary: #3498DB; // Light Blue
+$accent: #E74C3C; // Red
+$background: #ECF0F1; // Light Gray
+$text: #3498DB; // Light Blue
+$subtext: #3498DB; // Light Blue
+$shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Professional and trustworthy box shadow
+
+
+
+
+// Font
+$font-family-sans: 'Roboto', sans-serif;
+
+// Border Styles
+$border-color: #BDC3C7; // Gray
+$border-width: 1px;
+$border-radius: 4px;
+
+// Animation Speeds
+$transition-duration-fast: 150ms;
+$transition-duration-medium: 300ms;
+$transition-duration-slow: 500ms;
+
+// Paddings
+/*
+$padding-sm: 4px;
+$padding-md: 8px;
+$padding-lg: 16px;
+*/
+$padding-sm: .5rem;
+$padding-md: 1rem;
+$padding-lg: 2rem;
+
+// Apply styles
+body {
+  font-family: $font-family-sans;
+  background-color: $background;
+  color: $text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans;
+  color: $primary;
+}
+h1{
+  font-size: 1.5rem;
+}
+
+.text-lg{ 
+  font-size: 1.5rem;
+}
+
+button {
+  font-family: $font-family-sans;
+  background-color: $primary;
+  color: #FFFFFF; // White text
+  padding: $padding-sm $padding-md;
+  border-radius: $border-radius;
+  border: $border-width solid $border-color;
+  transition: background-color $transition-duration-medium;
+  &:hover {
+    background-color: $secondary;
+  }
+}
+
+.main{
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%), 
+                    linear-gradient(225deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%), 
+                    linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%), 
+                    linear-gradient(315deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%);
+  background-position: 10px 0, 10px 0, 0 0, 0 0;
+  background-size: 20px 20px;
+  background-color: $secondary; // Fallback color
+  border-color: $border-color;
+  border-width: $border-width;
+  border-radius: $border-radius;
+  padding: $padding-sm;
+  background-image: linear-gradient(135deg, #ECF0F1 25%, transparent 25%), 
+  linear-gradient(225deg, #ECF0F1 25%, transparent 25%), 
+  linear-gradient(45deg, #ECF0F1 25%, transparent 25%), 
+  linear-gradient(315deg, #ECF0F1 25%, #3498DB 25%);
+background-position: 10px 0, 10px 0, 0 0, 0 0;
+background-size: 20px 20px;
+background-color: $secondary; // Fallback color
+}
+.projects, .hello{
+  background-color: $primary;
+  border-color: $border-color;
+  border-width: $border-width;
+  border-radius: $border-radius;
+  padding: $padding-sm;
+}
+
+.main, .projects, .hello {
+  box-shadow: $shadow;
+}
+
+.subtext{
+  color: $text;
+  font-style: italic;
+}
+
+.location-and-links{
+  color: $text;
+}
+

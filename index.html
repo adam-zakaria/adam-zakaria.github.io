@@ -1,19 +1,40 @@
 <!doctype html>
 <html class="w-screen h-screen" lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adam Zakaria site</title>
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body class="w-full h-full p-2">
-    <div class="w-full h-full grid grid-cols-1 md:grid-cols-3 gap-2 p-2 border-2 border-red-500">
-      <div class="col-span-1 md:col-span-1 h-full border-2 border-red-500">
-      </div>
-      <div class="col-span-1 md:col-span-2 h-full border-2 border-red-500">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adam Zakaria site</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="w-full h-full">
+  <div class="main w-full h-full grid grid-cols-1 md:grid-cols-3 gap-2 p-2 border-2 border-red-500">
+    <div class="hello col-span-1 md:col-span-1 h-full border-2 border-red-500">
+      <div class="h-full grid grid-rows-5">
+        <div class="row-span-1">
+          <h1>face photo</h1>
+        </div>
+        <div class="row-span-1">
+          <h1>Adam Zakaria</h1>
+        </div>
+        <div class="row-span-1">
+          <h1 class="subtext text-lg">Software Engineer that likes to not think not thoughts</h1>
+        </div>
+        <div class="row-span-1">
+          <h1 class="location-and-links">
+            <div><img class="inline-block" src="pin.png" alt="pin"></div><span>Cambridge, MA</span>
+            <div><img class="inline-block" src="linkedin.png" alt="linkedin"></div><span>https://www.linkedin.com/in/adam-zakaria-543847271/</span>
+          </h1>
+        </div>
       </div>
     </div>
-    <script type="module" src="main.js"></script>
-  </body>
+    <div class="projects col-span-1 md:col-span-2 h-full border-2 border-red-500">
+      <h1>Projects</h1>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+
 </html>
