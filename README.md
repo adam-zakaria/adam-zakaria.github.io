@@ -1,6 +1,11 @@
 # Server Side rendering
 For SEO
 
+# Wondering
+If I should've just used shadcn/ui because it's very light weight and this is even more tedious than I expected.
+
+Grid really seems like a better option for layout...but there are differences. It seems like grid is really for two dimensional layout. So like page level layout.
+
 # Install packages
 `npm i`
 

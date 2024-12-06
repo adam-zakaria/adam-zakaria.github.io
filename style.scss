@@ -130,4 +130,11 @@ background-color: $secondary; // Fallback color
   font-family: $font-family-sans;
   color: $pearl; // Use the pearl color
 }
+p{
+  color: $text;
+}
+
+.text-secondary{
+  color: $secondary;
+}
 
