@@ -11,31 +11,37 @@
 
 <body class="w-screen h-screen">
   <div class="main w-screen h-screen grid grid-cols-1 md:grid-cols-3 gap-2 p-2 border-2 border-red-500">
-    <div class="main-left col-span-1 md:col-span-1 h-full border-2 border-red-500">
-      <div class="h-full grid grid-rows-5">
-        <div class="row-span-1">
+    <div class="main-left  grid grid-rows-5 col-span-1 md:col-span-1 h-full border-2 border-red-500">
+        <div class="hello row-span-1 flex items-center justify-center">
           <h1 class="text-8xl font-bold text-white">Hello</h1>
-          <h1>face photo</h1>
         </div>
-        <div class="row-span-1">
+        <div class="photo row-span-1 flex items-center justify-center">
           <h1>Adam Zakaria</h1>
         </div>
-        <div class="row-span-1">
-          <h1 class="subtext text-lg">Software Engineer that likes to not think not thoughts</h1>
+        <div class="about-me row-span-1 flex items-center justify-center">
+          <div>
+          <ul class="subtext text-lg list-none">
+            <li class="flex items-center">
+              <img class="mr-2 w-4" src="https://www.svgrepo.com/show/169312/check-mark.svg" alt="checkmark">Software Engineer
+            </li>
+            <li class="flex items-center">
+              <img class="mr-2 w-4" src="https://www.svgrepo.com/show/169312/check-mark.svg" alt="checkmark">Not thinker of not thoughts
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="row-span-1">
-          <h1 class="location-and-links">
-            <div class="flex items-center justify-center">
-              <img class="inline-block w-4" src="https://cdn-icons-png.flaticon.com/256/484/484167.png" alt="pin">
-              <p class="ml-2">Cambridge, MA</p>
-            </div>
-            <div class="flex items-center justify-center">
-              <img class="inline-block w-4" src="https://img.icons8.com/win10/512/linkedin.png" alt="linkedin">
-              <a class="ml-2" href="https://cdn-icons-png.flaticon.com/512/61/61109.png">https://www.linkedin.com/in/adam-zakaria-543847271/</a>
-            </div>
-          </h1>
+        <div class="links-and-location row-span-1 flex items-center justify-center">
+            <div>
+              <div class="flex items-center justify-center">
+                <img class="inline-block w-4" src="https://cdn-icons-png.flaticon.com/256/484/484167.png" alt="pin">
+                <p class="ml-2">Cambridge, MA</p>
+              </div>
+              <div class="">
+                <img class="inline-block w-4" src="https://cdn-icons-png.flaticon.com/512/61/61109.png" alt="linkedin">
+                <a class="ml-2" href="https://www.linkedin.com/in/adam-zakaria-543847271/">LinkedIn</a>
+              </div>
+          </div>
         </div>
-      </div>
     </div>
     <div class="main-right col-span-1 md:col-span-2 h-full border-2 h-full w-full border-red-500">
       <h1>Projects</h1>
