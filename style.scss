@@ -8,6 +8,7 @@ $background: #ECF0F1; // Light Gray
 $text: #3498DB; // Light Blue
 $subtext: #3498DB; // Light Blue
 $shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Professional and trustworthy box shadow
+$pearl: #F0EAD6; // Define the pearl color
 
 
 
@@ -86,16 +87,20 @@ button {
 background-position: 10px 0, 10px 0, 0 0, 0 0;
 background-size: 20px 20px;
 background-color: $secondary; // Fallback color
+  animation: moveBackground 20s ease-in-out infinite;
+  opacity: 0.95; // Subtle transparency
 }
-.projects, .hello{
+ .main-left, .main-right{
   background-color: $primary;
   border-color: $border-color;
   border-width: $border-width;
   border-radius: $border-radius;
   padding: $padding-sm;
+  animation: moveBackground 20s ease-in-out infinite;
+  opacity: 0.95; // Subtle transparency
 }
 
-.main, .projects, .hello {
+.main, .main-right, .main-left {
   box-shadow: $shadow;
 }
 
@@ -106,5 +111,23 @@ background-color: $secondary; // Fallback color
 
 .location-and-links{
   color: $text;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.heading-xl {
+  font-size: 2.5rem;
+  font-family: $font-family-sans;
+  color: $pearl; // Use the pearl color
 }
 
