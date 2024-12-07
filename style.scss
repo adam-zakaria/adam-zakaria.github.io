@@ -1,57 +1,55 @@
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */
 /* Professional and trustworthy styles */
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */
 
-// Color Palette
+/* ##################################  */
+/* Global vars */
+/* ##################################  */
 $primary: #2C3E50; // Dark Blue
 $secondary: #3498DB; // Light Blue
 $accent: #E74C3C; // Red
 $background: #ECF0F1; // Light Gray
 $text: #3498DB; // Light Blue
 $subtext: #3498DB; // Light Blue
-$shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Professional and trustworthy box shadow
+$shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // box shadow
 $pearl: #F0EAD6; // Define the pearl color
-
-
-
-
-// Font
-$font-family-sans: 'Roboto', sans-serif;
-
-// Border Styles
+$font-family-sans: 'Roboto', sans-serif; // font
 $border-color: #BDC3C7; // Gray
 $border-width: 1px;
 $border-radius: 4px;
-
 // Animation Speeds
 $transition-duration-fast: 150ms;
 $transition-duration-medium: 300ms;
 $transition-duration-slow: 500ms;
-
 // Paddings
-/*
-$padding-sm: 4px;
-$padding-md: 8px;
-$padding-lg: 16px;
-*/
 $padding-sm: .5rem;
 $padding-md: 1rem;
 $padding-lg: 2rem;
 
-// Apply styles
+/* ##################################  */
+/* Tag Styles */
+/* ##################################  */
 body {
   font-family: $font-family-sans;
   background-color: $background;
   color: $text;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $font-family-sans;
   color: $primary;
 }
-h1{
+
+h1 {
   font-size: 1.5rem;
 }
 
-.text-lg{ 
+.text-lg {
   font-size: 1.5rem;
 }
 
@@ -63,16 +61,24 @@ button {
   border-radius: $border-radius;
   border: $border-width solid $border-color;
   transition: background-color $transition-duration-medium;
+
   &:hover {
     background-color: $secondary;
   }
 }
 
-.main{
-  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%), 
-                    linear-gradient(225deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%), 
-                    linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%), 
-                    linear-gradient(315deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%);
+p {
+  color: $text;
+}
+
+/* ##################################  */
+/* Class styles */
+/* ##################################  */
+.main {
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%),
+    linear-gradient(315deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%);
   background-position: 10px 0, 10px 0, 0 0, 0 0;
   background-size: 20px 20px;
   background-color: $secondary; // Fallback color
@@ -80,61 +86,67 @@ button {
   border-width: $border-width;
   border-radius: $border-radius;
   padding: $padding-sm;
-  background-image: linear-gradient(135deg, #ECF0F1 25%, transparent 25%), 
-  linear-gradient(225deg, #ECF0F1 25%, transparent 25%), 
-  linear-gradient(45deg, #ECF0F1 25%, transparent 25%), 
-  linear-gradient(315deg, #ECF0F1 25%, #3498DB 25%);
-background-position: 10px 0, 10px 0, 0 0, 0 0;
-background-size: 20px 20px;
-background-color: $secondary; // Fallback color
+  background-image: linear-gradient(135deg, #ECF0F1 25%, transparent 25%),
+    linear-gradient(225deg, #ECF0F1 25%, transparent 25%),
+    linear-gradient(45deg, #ECF0F1 25%, transparent 25%),
+    linear-gradient(315deg, #ECF0F1 25%, #3498DB 25%);
+  background-position: 10px 0, 10px 0, 0 0, 0 0;
+  background-size: 20px 20px;
+  background-color: $secondary; // Fallback color
   animation: moveBackground 20s ease-in-out infinite;
   opacity: 0.95; // Subtle transparency
 }
- .main-left, .main-right{
+
+.main,
+.main-right,
+.main-left {
+  box-shadow: $shadow;
+}
+
+.main-left,
+.main-right {
   background-color: $primary;
   border-color: $border-color;
   border-width: $border-width;
   border-radius: $border-radius;
   padding: $padding-sm;
   animation: moveBackground 20s ease-in-out infinite;
+
+  @keyframes moveBackground {
+    0% {
+      background-position: 0% 0%;
+    }
+
+    50% {
+      background-position: 100% 100%;
+    }
+
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
   opacity: 0.95; // Subtle transparency
 }
 
-.main, .main-right, .main-left {
-  box-shadow: $shadow;
-}
-
-.subtext{
-  color: $text;
-  font-style: italic;
-}
-
-.location-and-links{
-  color: $text;
-}
-
-@keyframes moveBackground {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
-
+/* ##################################  */
+/* General utility styles */
+/* ##################################  */
 .heading-xl {
   font-size: 2.5rem;
   font-family: $font-family-sans;
   color: $pearl; // Use the pearl color
 }
-p{
-  color: $text;
-}
 
-.text-secondary{
+.text-secondary {
   color: $secondary;
 }
 
+.subtext {
+  color: $text;
+  font-style: italic;
+}
+
+.location-and-links {
+  color: $text;
+}
