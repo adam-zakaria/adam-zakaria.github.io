@@ -146,19 +146,18 @@ p {
 }
 
 .main-left{
-  @apply grid grid-rows-5 col-span-1 md:col-span-1 h-full border-2;
+  @apply grid grid-rows-5 col-span-1 md:col-span-1 h-full border-2 flex justify-center;
   .hello{
     @apply row-span-1 flex items-center justify-center;
     h1{
       @apply text-8xl font-bold text-secondary;
     }
   }
-  .photo{
+  .bullet{
     @apply row-span-1 flex items-center justify-center;
-    img{
-      @apply w-3/5;
-    }
   }
+
+
   .about-me{
     @apply row-span-1 flex items-center justify-center;
     .about-list{
