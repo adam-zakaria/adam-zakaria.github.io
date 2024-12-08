@@ -8,7 +8,8 @@
     "prod": "vite build && serve -s dist -l 5173",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build-css": "sass style.scss dist/style.css && npx tailwindcss -i dist/style.css -o dist/style.css"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
