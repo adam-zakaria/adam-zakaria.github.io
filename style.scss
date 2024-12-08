@@ -155,6 +155,9 @@ p {
   }
   .photo{
     @apply row-span-1 flex items-center justify-center;
+    img{
+      @apply w-3/5;
+    }
   }
   .about-me{
     @apply row-span-1 flex items-center justify-center;
