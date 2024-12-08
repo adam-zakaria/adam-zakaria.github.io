@@ -149,7 +149,6 @@
 
 html,
 :host {
-  overscroll-behavior: none;
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -175,8 +174,6 @@ html,
 */
 
 body {
-    overscroll-behavior: none;
-
   margin: 0;
   /* 1 */
   line-height: inherit;
@@ -585,12 +582,17 @@ video {
 
 /* ##################################  */
 
+html {
+  overscroll-behavior: none;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: #ECF0F1;
   color: #3498DB;
   height: 100vh;
   width: 100vw;
+  overscroll-behavior: none;
 }
 
 h1,
@@ -627,10 +629,6 @@ button:hover {
 
 p {
   color: #3498DB;
-  white-space: normal;
-  word-wrap: break-word;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 /* ##################################  */
@@ -787,6 +785,10 @@ p {
   margin-right: 0.5rem;
   display: inline-block;
   width: 1rem;
+}
+
+.main-left .links-and-location div div p {
+  flex: 1 1 0%;
 }
 
 .main-right {

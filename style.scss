@@ -206,6 +206,9 @@ p {
         img {
           @apply w-2 mr-2 inline-block w-4;
         }
+        p{
+          @apply flex-1;
+        }
       }
     }
   }
