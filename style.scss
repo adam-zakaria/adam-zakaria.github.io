@@ -153,6 +153,9 @@ p {
       @apply text-8xl font-bold text-secondary;
     }
   }
+    .photo{
+      @apply  ml-auto mr-auto w-1/2
+    }
   .bullet{
     @apply row-span-1 flex items-center justify-center;
   }
