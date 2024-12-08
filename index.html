@@ -6,18 +6,18 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adam Zakaria site</title>
-  <link href="dist/style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="main">
     <div class="main-left">
-        <div class="hello">
-          <h1>Hello</h1>
-        </div>
-        <img class="photo" src="linkedin_blue.png" alt="Adam Zakaria">
-        <div class="about-me">
-          <div class="about-list">
+      <div class="hello">
+        <h1>Hello</h1>
+      </div>
+      <img class="photo" src="linkedin_blue.png" alt="Adam Zakaria">
+      <div class="about-me">
+        <div class="about-list">
           <ul>
             <li>
               <img class="bullet" src="https://cdn-icons-png.flaticon.com/256/0/14.png" alt="bullet">
@@ -28,23 +28,37 @@
               <p>Books, music, basketball, and Halo</p>
             </li>
           </ul>
+        </div>
+      </div>
+      <div class="links-and-location">
+        <div>
+          <div>
+            <img src="https://cdn-icons-png.flaticon.com/256/484/484167.png" alt="pin">
+            <p>Cambridge, MA</p>
+          </div>
+          <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/61/61109.png" alt="linkedin">
+            <a href="https://www.linkedin.com/in/adam-zakaria-543847271/">LinkedIn</a>
           </div>
         </div>
-        <div class="links-and-location">
-            <div>
-              <div>
-                <img src="https://cdn-icons-png.flaticon.com/256/484/484167.png" alt="pin">
-                <p>Cambridge, MA</p>
-              </div>
-              <div>
-                <img src="https://cdn-icons-png.flaticon.com/512/61/61109.png" alt="linkedin">
-                <a href="https://www.linkedin.com/in/adam-zakaria-543847271/">LinkedIn</a>
-              </div>
-          </div>
-        </div>
+      </div>
     </div>
-    <div class="main-right">
+    <div class="main-right flex flex-col md:flex-row flex-1 h-full border-2 items-center gap-4">
       <h1>Projects</h1>
+      <div class="p-1 w-3/5 card flex flex flex-col">
+        <a href="https://cliptu.com">
+          <h2>Cliptu</h2>
+          <img src="cliptu.png" alt="cliptu"></img>
+          <p class="subtext">Find moments within videos.</p>
+        </a>
+      </div>
+      <div class="p-1 w-3/5 card flex flex flex-col">
+        <a href="https://fluent.monster">
+          <h2>Fluent</h2>
+          <img src="fluent.png" alt="fluent"></img>
+          <p class="subtext">Learn 20 languages at once.</p>
+        </a>
+      </div>
     </div>
   </div>
   <script type="module" src="main.js"></script>
