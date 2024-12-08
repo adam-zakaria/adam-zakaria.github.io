@@ -42,11 +42,16 @@ $padding-lg: 2rem;
 /* ##################################  */
 /* Tag Styles */
 /* ##################################  */
+html {
+  overscroll-behavior: none;
+}
+
 body {
   font-family: $font-family-sans;
   background-color: $background;
   color: $text;
   @apply w-screen h-screen;
+  overscroll-behavior: none;
 }
 
 h1,
