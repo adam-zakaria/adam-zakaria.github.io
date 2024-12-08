@@ -1,6 +1,13 @@
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */
 /* Professional and trustworthy styles */
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.subtext li {
+  color: black;
+}
 
 /* ##################################  */
 /* Global vars */
@@ -26,6 +33,12 @@ $padding-sm: .5rem;
 $padding-md: 1rem;
 $padding-lg: 2rem;
 
+
+@mixin subtext {
+  color: $subtext;
+  font-style: italic;
+}
+
 /* ##################################  */
 /* Tag Styles */
 /* ##################################  */
@@ -33,6 +46,7 @@ body {
   font-family: $font-family-sans;
   background-color: $background;
   color: $text;
+  @apply w-screen h-screen;
 }
 
 h1,
@@ -95,6 +109,8 @@ p {
   background-color: $secondary; // Fallback color
   animation: moveBackground 20s ease-in-out infinite;
   opacity: 0.95; // Subtle transparency
+
+  @apply w-screen h-screen grid grid-cols-1 md:grid-cols-3 gap-2 p-2 border-2;
 }
 
 .main,
@@ -129,6 +145,42 @@ p {
   opacity: 0.95; // Subtle transparency
 }
 
+.main-left{
+  @apply grid grid-rows-5 col-span-1 md:col-span-1 h-full border-2;
+  .hello{
+    @apply row-span-1 flex items-center justify-center;
+  }
+  .photo{
+    @apply row-span-1 flex items-center justify-center;
+  }
+  .about-me{
+    @apply row-span-1 flex items-center justify-center;
+    .about-list{
+      @apply w-3/5;
+      ul{
+        @apply list-none;
+        @include subtext;
+        li{
+          @apply flex items-center;
+          img{
+            @apply w-2 mr-2;
+          }
+        }
+      }
+    }
+  }
+  .links-and-location{
+    @apply row-span-1 flex items-center justify-center;
+  }
+}
+
+.main-right{
+  @apply col-span-1 md:col-span-2 h-full border-2 flex justify-center;
+  .projects-header{
+    @apply inline-block text-8xl font-bold text-secondary;
+  }
+}
+
 /* ##################################  */
 /* General utility styles */
 /* ##################################  */
@@ -140,11 +192,6 @@ p {
 
 .text-secondary {
   color: $secondary;
-}
-
-.subtext {
-  color: $text;
-  font-style: italic;
 }
 
 .location-and-links {
