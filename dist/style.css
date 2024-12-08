@@ -778,6 +778,7 @@ p {
 
 .main-left .links-and-location div div {
   display: flex;
+  width: 100%;
   align-items: center;
 }
 
