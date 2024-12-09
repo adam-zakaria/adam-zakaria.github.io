@@ -1,3 +1,6 @@
+# To do
+I'm a little frustrated because I'm not sure how to best organize the styles. I think especially having responsive styles is confusing: some classes are for mobile, some are for desktop, etc.
+
 # Server Side rendering
 For SEO
 
