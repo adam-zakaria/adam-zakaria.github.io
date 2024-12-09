@@ -1,3 +1,10 @@
+# Fitting the panels
+* .main is flex-col md:flex-row
+* .main-left is flex-1
+* .main-right is flex-1
+.main-left and .main-right are stacked as expected, but .main-right is overflowing past .main, even though .main is overflow-scroll
+
+
 # Server Side rendering
 For SEO
 
