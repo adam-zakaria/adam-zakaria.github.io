@@ -1,10 +1,10 @@
-# Deploy 
+# Deploy
 Merge dev to main
-`npm run build-css`
-`git push`
+`npm run prod`
 
 # Development
 main branch imports style.css. dev branch uses main.js to import style.scss. use dev branch for development.
+`npm run dev`
 
 # Install packages
 `npm i`
