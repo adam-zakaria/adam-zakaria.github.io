@@ -9,7 +9,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "build-css": "sass style.scss style.css && npx tailwindcss -i style.css -o style.css && g 'save changes' && git push"
+    "build-css": "sass style.scss style.css && npx tailwindcss -i style.css -o style.css && git add . && git commit -m 'save changes' && git push"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
