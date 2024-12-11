@@ -9,7 +9,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "build-css": "sass style.scss dist/style.css && npx tailwindcss -i dist/style.css -o dist/style.css"
+    "build-css": "sass style.scss style.css && npx tailwindcss -i style.css -o style.css"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",

@@ -1,17 +1,7 @@
-# Fitting the panels
-* .main is flex-col md:flex-row
-* .main-left is flex-1
-* .main-right is flex-1
-.main-left and .main-right are stacked as expected, but .main-right is overflowing past .main, even though .main is overflow-scroll
-
-
-# Server Side rendering
-For SEO
-
-# Wondering
-If I should've just used shadcn/ui because it's very light weight and this is even more tedious than I expected.
-
-Grid really seems like a better option for layout...but there are differences. It seems like grid is really for two dimensional layout. So like page level layout.
+# Deploy 
+Merge dev to main
+`npm run build-css`
+`git push`
 
 # Install packages
 `npm i`
