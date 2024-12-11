@@ -51,7 +51,7 @@ body {
   background-color: $background;
   color: $text;
   @apply w-screen h-screen;
-  overscroll-behavior: none;
+  //overscroll-behavior: none;
 }
 
 h1,
