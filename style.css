@@ -622,9 +622,14 @@ video {
 
 /* ##################################  */
 
+/*
 html {
+  // causing weird scroll behavior on mobile
+  // stops before the end of the page
+  // disabling for now
   overscroll-behavior: none;
 }
+*/
 
 body {
   font-family: "Roboto", sans-serif;
