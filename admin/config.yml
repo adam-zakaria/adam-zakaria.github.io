@@ -1,0 +1,18 @@
+backend:
+  name: file-system
+  media_folder: "public/uploads" # Adjust this to where your images or media files are stored
+  public_folder: "/uploads"
+
+
+media_folder: "public/uploads" # Where images are stored
+public_folder: "/uploads"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "body", label: "Body", widget: "markdown" }
