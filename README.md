@@ -4,6 +4,17 @@
 # Run
 `npm run dev`
 
+# Decap CMS
+
+npx decap-server
+
+## Docs
+We used this specific backend:
+https://decapcms.org/docs/working-with-a-local-git-repository/
+
+## Files
+
+
 # Install Tailwind
 https://tailwindcss.com/docs/installation/using-postcss
 * Update postcss.config.js to postcss.config.cjs

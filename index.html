@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adam Zakaria site</title>
   <!--<link href="./style.css" rel="stylesheet">-->
+  <script type="module" src="main.js"></script>
 </head>
 
 <body>
@@ -67,26 +68,42 @@
       </div>
 
   </div>
-  <script type="module" src="main.js"></script>
   <script type="module">
-    import { marked } from "marked";
+import { marked } from "marked";
 
-    async function loadPost(filename) {
-      const response = await fetch(`/posts/${filename}.md`);
-      if (!response.ok) {
-        document.getElementById("content").textContent = "Post not found.";
-        return;
-      }
-      else {
+async function loadPosts() {
+  // build script on github
+  /*
+  for each file in folder, build html and append to .content
+  */
+ /*
+ How to test in dev?
 
-      }
-      const markdown = await response.text();
-      const html = marked(markdown);
-      document.getElementById("content").innerHTML = html;
-    }
+ Could just treat it like....
+ Well...we don't need to test it in dev maybe?
 
-    // Example: Load a specific post
-    loadPost("example-post");
+ not really necessary for now...
+
+ so let's just create html with the file names then do the actually markdown render...well...we'll need to create pages for each post...
+  Which is done pretty naturally by templating.
+  So we could just create a template for each post and then render the markdown into that template.
+
+  We really just need the base template: 
+  the card with the background, and then style the html
+  So maybe I should just do this in node js..? Or just do it with a simple index.html
+
+
+
+
+
+ */
+  
+
+}
+
+loadPosts();
+
+  
   </script>
 </body>
 
