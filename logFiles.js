@@ -1,7 +1,7 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-const directoryPath = path.join(__dirname, 'public/posts');
+const directoryPath = path.join(process.cwd(), 'public/posts');
 
 fs.readdir(directoryPath, (err, files) => {
   if (err) {
