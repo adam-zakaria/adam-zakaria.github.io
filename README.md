@@ -1,3 +1,20 @@
+
+# Implement Blog
+## CMS push to main
+* Not using github auth because it involves oauth with Netlify (too complex)
+* We will listen for writes to the local folder, and push to main when we detect a write. This translates well if we transition to a server.
+* And 
+
+## On push, run github action (node gh_hook.js) to generate html files
+* .github/workflows/gh_hook.yml
+
+## implement node gh_hook.js to generate html files
+* Read index.html into DOM, and for each post create a new link, and append to content.
+* For each post, create a new html file in public/renderedPosts that a link points to.
+
+## Push to main
+* Modify gh_hook.yml
+
 # Deploy
 Merge dev to main
 `npm run prod`
