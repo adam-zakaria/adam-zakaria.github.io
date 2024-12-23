@@ -1,10 +1,7 @@
-<!doctype html>
-<html class="w-screen h-screen" lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html><html class="w-screen h-screen" lang="en"><head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adam Zakaria site</title>
   <!--<link href="./style.css" rel="stylesheet">-->
   <script type="module" src="main.js"></script>
@@ -50,61 +47,26 @@
         <div class="p-1 w-3/5 card flex flex flex-col">
           <a href="https://cliptu.com">
             <h2>Cliptu</h2>
-            <img src="cliptu.png" alt="cliptu"></img>
+            <img src="cliptu.png" alt="cliptu">
             <p class="subtext">Find moments within videos.</p>
           </a>
         </div>
         <div class="p-1 w-3/5 card flex flex flex-col">
           <a href="https://fluent.monster">
             <h2>Fluent</h2>
-            <img src="fluent.png" alt="fluent"></img>
+            <img src="fluent.png" alt="fluent">
             <p class="subtext">Learn 20 languages at once.</p>
           </a>
         </div>
       </div>
-      <!-- background color white -->
-      <div class="bg-white">
-        <div id="content">Loading...</div>
+
+      <h1>Thoughts</h1>
+      <div class="flex flex-col items-center md:flex-row">
+        <div class="p-1 w-3/5 card blog-links flex flex-col">
+        <a href="/renderedPosts/check-me-out.html">Check me out!</a><a href="/renderedPosts/mind-body-nba.html">Mind body NBA</a></div>
       </div>
 
   </div>
-  <script type="module">
-import { marked } from "marked";
-
-async function loadPosts() {
-  // build script on github
-  /*
-  for each file in folder, build html and append to .content
-  */
- /*
- How to test in dev?
-
- Could just treat it like....
- Well...we don't need to test it in dev maybe?
-
- not really necessary for now...
-
- so let's just create html with the file names then do the actually markdown render...well...we'll need to create pages for each post...
-  Which is done pretty naturally by templating.
-  So we could just create a template for each post and then render the markdown into that template.
-
-  We really just need the base template: 
-  the card with the background, and then style the html
-  So maybe I should just do this in node js..? Or just do it with a simple index.html
 
 
-
-
-
- */
-  
-
-}
-
-loadPosts();
-
-  
-  </script>
-</body>
-
-</html>
+</div></body></html>
