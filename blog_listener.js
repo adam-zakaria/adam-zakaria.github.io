@@ -19,13 +19,14 @@ const __dirname = join(__filename).split('/').slice(0, -1).join('/');
 const postsDir = join(__dirname, 'posts');
 const renderedPostsDir = join(__dirname, 'renderedPosts');
 
-// Function to generate HTML for a post
+// generate blog post link and blog post page
 function generateHtmlForPost(file) {
-    const filePath = join(postsDir, file);
-    const fileContent = fs.readFileSync(filePath, 'utf8');
+    /* ********** Init vars ********** */
+    const mdFilePath = join(postsDir, file);
+    const mdTextContent = fs.readFileSync(mdFilePath, 'utf8');
 
-    // Extract YAML front matter
-    const frontMatterMatch = fileContent.match(/^---\n([\s\S]+?)\n---/);
+    /* ********** Get title from MD for links and post pages ********** */
+    const frontMatterMatch = mdTextContent.match(/^---\n([\s\S]+?)\n---/);
     let title = 'Untitled';
     if (frontMatterMatch) {
         try {
@@ -36,35 +37,41 @@ function generateHtmlForPost(file) {
         }
     }
 
+    /* ********** Create blog post pages ********** */
     // Render markdown
-    const renderedContent = marked(fileContent);
+    const renderedContent = marked(mdTextContent);
+    const htmlFilePath = join(renderedPostsDir, file.replace(/\.md$/, '.html'));
+    const htmlFileContent = `
+    <!DOCTYPE html>
+    <html>
+        <body>
+            ${renderedContent}
+        </body>
+    </html>
+    `;
 
+    fs.writeFileSync(htmlFilePath, htmlFileContent);
     // Make renderedPostsDir if it doesn't exist
     if (!fs.existsSync(renderedPostsDir)) {
         fs.mkdirSync(renderedPostsDir, { recursive: true });
     }
 
-    // Write to file
-    const htmlFilePath = join(renderedPostsDir, file.replace(/\.md$/, '.html'));
-    fs.writeFileSync(htmlFilePath, renderedContent);
-
+    /* ********** Create blog links (Write blog links to index.html) ********** */
     // Read index.html into DOM using jsdom
     const indexHtml = fs.readFileSync(join(__dirname, 'index.html'), 'utf8');
     const dom = new JSDOM(indexHtml);
     const document = dom.window.document;
-
     // convert markdown file name to html file name
     const htmlFileName = file.replace(/\.md$/, '.html');
     // Create link as a string
     let link = `<a href="/renderedPosts/${htmlFileName}">${title}</a>`;
-
     // Append link to the blog-links div using innerHTML
     document.querySelector('.blog-links').innerHTML += link;
-
     // write the updated index.html to disk
     fs.writeFileSync(join(__dirname, 'index.html'), dom.serialize());
-
     console.log(link);
+
+
 }
 
 // Watch for file creation and modification
