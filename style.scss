@@ -180,6 +180,9 @@ p {
   opacity: 0.95; // Subtle transparency
 }
 
+h1 {
+  @apply text-8xl font-bold text-secondary;
+}
 
 .main {
   background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
@@ -214,9 +217,6 @@ p {
   .hello {
     @apply flex items-center justify-center;
 
-    h1 {
-      @apply text-8xl font-bold text-secondary;
-    }
   }
 
   .photo {

@@ -1,13 +1,14 @@
 /* 
 * Listen for writes to public/posts 
 * Read index.html into DOM, and for each post create a new link, and append to content.
-* For each post, create a new html file in public/renderedPosts that a link points to.
+* For each post, create a new html file in renderedPosts that a link points to.
 * Commit and push when we detect a write.
 */
 
 import { fileURLToPath } from 'url';
 import { join } from 'path';
 import chokidar from 'chokidar';
+import utils from 'utils';
 import fs from 'fs';
 import { marked } from 'marked';
 import { JSDOM } from 'jsdom';
@@ -18,6 +19,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = join(__filename).split('/').slice(0, -1).join('/');
 const postsDir = join(__dirname, 'posts');
 const renderedPostsDir = join(__dirname, 'renderedPosts');
+
+utils.mkdir(renderedPostsDir)
 
 // generate blog post link and blog post page
 function generateHtmlForPost(file) {
@@ -64,7 +67,8 @@ function generateHtmlForPost(file) {
     // convert markdown file name to html file name
     const htmlFileName = file.replace(/\.md$/, '.html');
     // Create link as a string
-    let link = `<a href="/renderedPosts/${htmlFileName}">${title}</a>`;
+    // Yes we are rendering posts to renderedPosts, but we do an additional transformation to templatedPosts
+    let link = `<a href="/templatedPosts/${htmlFileName}">${title}</a>`;
     // Append link to the blog-links div using innerHTML
     document.querySelector('.blog-links').innerHTML += link;
     // write the updated index.html to disk
@@ -73,6 +77,18 @@ function generateHtmlForPost(file) {
 
 
 }
+
+// on start, clear blog post links
+const indexHtml = fs.readFileSync(join(__dirname, 'index.html'), 'utf8');
+const dom = new JSDOM(indexHtml);
+const document = dom.window.document;
+// convert markdown file name to html file name
+// Append link to the blog-links div using innerHTML
+document.querySelector('.blog-links').innerHTML = '';
+// write the updated index.html to disk
+fs.writeFileSync(join(__dirname, 'index.html'), dom.serialize());
+console.log('Cleared .blog-links')
+
 
 // Watch for file creation and modification
 const watcher = chokidar.watch(postsDir, { persistent: true });

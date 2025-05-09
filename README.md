@@ -1,18 +1,21 @@
 # Introduction
-This is my portfolio and blog, where I introduce myself and showcase projects.
+This is my portfolio and blog, where I introduce myself and showcase projects. In retrospect I'd make this site even simpler because I avoid frontend work and it's a tremendous burden to load into memory all the complexity when not actively doing frontend, but I'm claiming frontend skills so I wanted to showcase my skill a bit.
 
-To write blog posts I navigate to the Decap CMS where I manage posts and use a WYISWYG word processor to write posts.
+Unfortunately, even as is, the rendering is not entirely smooth - i.e. the page loads before the styling does so there is a blip.
 
-It's surprising to see that I actually modify the html with the blog links (i.e. I look at index.html and I see the links), but I think this is for the server side rendering.
+# Blog Feature
+I have a branch to add a blog feature, but it's pretty annoying to write and linking to an external blogging platform is preferable currently. But for the feature, to write blog posts I navigate to the Decap CMS where I manage posts and use a WYISWYG word processor to write posts.
 
 Posts are stored by decap CMS in 'post', i.e. posts/check-me-out.md
 blog_listener.js listens for changes and on change generateHtmlForPost(), which
 1) takes posts/*.md and outputs them to renderedPosts/*.html
 2) Adds links to index.html
 
-The way this works as a static site is that we leverage gitlab ci/cd and it builds the pages for us. i.e. on push, build the pages...hmmm, this doesn't quite cover the bases.
+The way this works as a static site is that we leverage gitlab ci/cd and it builds the pages for us. i.e. on push, build the pages.
 
+markdown -> html -> templated html
 
+Decap CMS writes to posts, blog_listener.js monitors posts and makes them renderedPosts/*.html, wrap.js is currently manually called and wraps renderedPosts to produce templatedPosts (wrapping in wrapper.html)
 
 We are making local modifications on dev and merging to main then pushing for changes to production.
 
@@ -20,9 +23,6 @@ We are making local modifications on dev and merging to main then pushing for ch
 `npm i`
 
 # Run
-Use pm2 to run in the background.
-i.e.
-`pm2 start nodemon blog_listener.js --name portfolio_blog_listener`
 
 ## Frontend
 `npm run dev`
@@ -32,6 +32,14 @@ i.e.
 
 ## Blog Listener
 `nodemon blog_listener.js`  
+
+## Wrap blog posts
+`node wrap.js`
+
+# Run in backkground
+Use pm2 to run in the background.
+i.e.
+`pm2 start 'nodemon blog_listener.js' --name portfolio_blog_listener`
 
 # Decap reachable at: 
 http://localhost:5173/admin/index.html
